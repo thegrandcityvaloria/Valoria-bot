@@ -59,7 +59,7 @@ export default {
                 },
 
                 {
-                    name: "🧬 เผ่า",
+                    name: "🧬 race",
                     value: races[player.race],
                     inline: true
                 },
