@@ -1,48 +1,43 @@
 import mongoose from "mongoose";
 
-
 const playerSchema = new mongoose.Schema({
 
-    // Discord User ID
-    userDiscord:{
-        type:String,
-        required:true,
-        unique:true
+    userDiscord: {
+        type: String,
+        required: true,
+        unique: true
     },
 
-    // ชื่อตัวละคร
-    username:{
-        type:String,
-        required:true
+    username: {
+        type: String,
+        required: true
     },
 
-    // เผ่าพันธุ์
-    race:{
-        type:String,
-        default:"ไม่ระบุ"
+    race: {
+        type: String,
+        required: true
     },
 
-    // อาชีพ
-    job:{
-        type:String,
-        default:"ผู้เริ่มต้น"
+    job: {
+        type: String,
+        required: true
     },
 
-    // Rank
-    rank:{
-        type:String,
-        default:"E"
+    rank: {
+        type: String,
+        default: "E"
     },
 
-    // EXP
-    exp:{
-        type:Number,
-        default:0
+    exp: {
+        type: Number,
+        default: 0
+    },
+
+    createdAt: {
+        type: Date,
+        default: Date.now
     }
+
 });
 
-export default mongoose.model(
-    "Player",
-    playerSchema,
-    "player"
-);
+export default mongoose.model("Player", playerSchema, "player");
