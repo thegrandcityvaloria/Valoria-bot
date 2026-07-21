@@ -48,7 +48,7 @@ export default {
 
             .setThumbnail(avatar)
 
-            .setDescription(`ข้อมูลตัวละครของ ${interaction.user}`)
+            .setDescription(`Player  ${interaction.user}`)
 
             .addFields(
 
