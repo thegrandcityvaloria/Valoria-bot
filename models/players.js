@@ -2,13 +2,20 @@ import mongoose from "mongoose";
 
 const playerSchema = new mongoose.Schema({
 
+    // Discord
     userDiscord: {
         type: String,
         required: true,
         unique: true
     },
 
-    username: {
+    discordUsername: {
+        type: String,
+        required: true
+    },
+
+    // Character
+    characterName: {
         type: String,
         required: true
     },
@@ -23,9 +30,15 @@ const playerSchema = new mongoose.Schema({
         required: true
     },
 
+    // Progression
     rank: {
         type: String,
         default: "E"
+    },
+
+    level: {
+        type: Number,
+        default: 1
     },
 
     exp: {
@@ -33,6 +46,64 @@ const playerSchema = new mongoose.Schema({
         default: 0
     },
 
+    ruby: {
+        type: Number,
+        default: 1000
+    },
+
+    // HP / MP
+    hp: {
+        type: Number,
+        default: 100
+    },
+
+    maxHp: {
+        type: Number,
+        default: 100
+    },
+
+    mp: {
+        type: Number,
+        default: 100
+    },
+
+    maxMp: {
+        type: Number,
+        default: 100
+    },
+
+    // Stats
+    str: {
+        type: Number,
+        default: 10
+    },
+
+    dex: {
+        type: Number,
+        default: 10
+    },
+
+    agi: {
+        type: Number,
+        default: 10
+    },
+
+    vit: {
+        type: Number,
+        default: 10
+    },
+
+    int: {
+        type: Number,
+        default: 10
+    },
+
+    luck: {
+        type: Number,
+        default: 10
+    },
+
+    // เวลาสมัคร
     createdAt: {
         type: Date,
         default: Date.now
