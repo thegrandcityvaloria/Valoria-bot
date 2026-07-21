@@ -93,13 +93,13 @@ export default {
 
                 {
                     name: "❤️ HP",
-                    value: `${player.hp} / 5000`,
+                    value: `${player.hp} / ${player.maxHp}`,
                     inline: true
                 },
 
                 {
                     name: "🔷 MP",
-                    value: `${player.mp} / 2000`,
+                    value: `${player.mp} / ${player.maxMp}`,
                     inline: true
                 },
 
