@@ -44,45 +44,25 @@ const mpPercent = Math.round((player.mp / player.maxMp) * 100);
             .setTitle("🏛️ The Grand City of Valoria")
             .setThumbnail(avatar)
 .setDescription(`
-\`\`\`ansi
-[1;33m═══════════════《 STATUS 》═══════════════[0m
+═══════════════《 STATUS 》═══════════════
 
-[1;37m👤 Name[0m  : ${player.characterName}
-[1;36m💎 Ruby[0m  : ${player.ruby.toLocaleString()}
+👤 Name : ${player.characterName}
+💎 Ruby : ${player.ruby.toLocaleString()}
 
-[1;31m❤ HP[0m  ${player.hp}/${player.maxHp} (${hpPercent}%)
+❤ HP : ${player.hp}/${player.maxHp}
 ${hpBar}
 
-[1;34m◆ MP[0m  ${player.mp}/${player.maxMp} (${mpPercent}%)
+◆ MP : ${player.mp}/${player.maxMp}
 ${mpBar}
 
-──────────────────────────────────────
+⚔ STR : ${player.str}
+🧠 INT : ${player.int}
 
-⚔ PK      : ${player.pk ?? 0}
-🛡 DP      : ${player.dp ?? 9}
+🧬 Race : ${races[player.race]}
+⚒ Job : ${jobs[player.job]}
+👑 Rank : ${player.rank}
 
-✨ EXP     : ${player.exp.toLocaleString()}
-📖 CEXP    : ${player.cExp ?? 86}
-
-──────────────────────────────────────
-
-⚔ STR  : ${player.str}        💨 AGI : ${player.agi}
-🧠 INT  : ${player.int}        🛡 VIT : ${player.vit}
-🏹 DEX  : ${player.dex}        🍀 LUK : ${player.luck}
-
-──────────────────────────────────────
-
-⭐ Skill Point : ${player.skillPoint ?? 64}
-
-🧬 Race   : ${races[player.race]}
-⚒ Job    : ${jobs[player.job]}
-👑 Rank   : ${player.rank}
-⭐ Level  : ${player.level}
-
-📅 Joined : ${createdDate}
-
-[1;33m══════════════════════════════════════════[0m
-\`\`\`
+══════════════════════════════════════════
 `)
                     .setFooter({
                 text: "The Grand City of Valoria"
