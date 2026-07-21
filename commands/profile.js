@@ -40,9 +40,9 @@ export default {
         const embed = new EmbedBuilder()
 
             const hpBar = "▰▰▰▱▱";
-const mpBar = "▰▰▰▰▱";
+            const mpBar = "▰▰▰▰▱";
 
-embed
+
 .setColor("#111111")
 .setTitle("🏛️ The Grand City of Valoria")
 .setThumbnail(avatar)
