@@ -53,7 +53,7 @@ export default {
             .addFields(
 
                 {
-                    name: "👤 ชื่อตัวละคร",
+                    name: "👤 Playr",
                     value: player.characterName,
                     inline: true
                 },
