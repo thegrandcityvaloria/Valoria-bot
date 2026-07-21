@@ -1,9 +1,7 @@
-import { SlashCommandBuilder } from "discord.js";
+export default {
+    name: "ping",
 
-export const data = new SlashCommandBuilder()
-    .setName("ping")
-    .setDescription("ทดสอบบอท");
-
-export async function execute(interaction) {
-    await interaction.reply("🏓 Pong!");
-}
+    async execute(interaction) {
+        await interaction.reply("🏓 Pong!");
+    }
+};
