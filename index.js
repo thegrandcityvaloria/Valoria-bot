@@ -20,7 +20,8 @@ const client = new Client({
 
 // คำสั่งทั้งหมด
 const commands = {
-  ping: ping
+  ping: ping,
+  register: register
 };
 
 
