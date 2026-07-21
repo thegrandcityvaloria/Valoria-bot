@@ -84,3 +84,13 @@ ${mpBar}
 [1;33m══════════════════════════════════════════[0m
 \`\`\`
 `)
+                    .setFooter({
+                text: "The Grand City of Valoria"
+            })
+            .setTimestamp();
+
+        await interaction.reply({
+            embeds: [embed]
+        });
+    }
+};
