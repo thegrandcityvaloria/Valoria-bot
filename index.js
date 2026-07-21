@@ -55,55 +55,59 @@ client.once("clientReady", async () => {
       required: true
     },
     {
-      name: "race",
-      description: "เลือกเผ่าพันธุ์",
-      type: 3,
-      required: true,
-      choices: [
-        {
-          name: "มนุษย์",
-          value: "มนุษย์"
-        },
-        {
-          name: "เอลฟ์",
-          value: "เอลฟ์"
-        },
-        {
-          name: "สัตว์อสูร",
-          value: "สัตว์อสูร"
-        },
-        {
-          name: "ปีศาจ",
-          value: "ปีศาจ"
-        }
+  name: "race",
+  description: "เลือกเผ่าพันธุ์",
+  type: 3,
+  required: true,
+  choices: [
+    {
+      name: "มนุษย์",
+      value: "human"
+    },
+    {
+      name: "เอลฟ์",
+      value: "elf"
+    },
+    {
+      name: "สัตว์อสูร",
+      value: "beast"
+    },
+    {
+      name: "ปีศาจ",
+      value: "demon"
+    }
+  ]
+},
       ]
     },
     {
-      name: "job",
-      description: "เลือกอาชีพ",
-      type: 3,
-      required: true,
-      choices: [
-        {
-          name: "อัศวิน",
-          value: "อัศวิน"
-        },
-        {
-          name: "นักเวท",
-          value: "นักเวท"
-        },
-        {
-          name: "พ่อค้า",
-          value: "พ่อค้า"
-        },
-        {
-          name: "เชฟ",
-          value: "เชฟ"
-        },
-        {
-          name: "บาร์เทนเดอร์",
-          value: "บาร์เทนเดอร์"
-        }
+  name: "job",
+  description: "เลือกอาชีพ",
+  type: 3,
+  required: true,
+  choices: [
+    {
+      name: "อัศวิน",
+      value: "knight"
+    },
+    {
+      name: "นักเวท",
+      value: "mage"
+    },
+    {
+      name: "พ่อค้า",
+      value: "trader"
+    },
+    {
+      name: "เชฟ",
+      value: "chef"
+    },
+    {
+      name: "บาร์เทนเดอร์",
+      value: "bartender"
+    }
+  ]
+}
       ]
     }
   ]
