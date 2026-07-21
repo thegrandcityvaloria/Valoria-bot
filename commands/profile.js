@@ -1,5 +1,5 @@
 
-console.log("ดึงข้อมูลผู้เล่น");
+console.log("🔥 PROFILE FILE LOADED");
 
 import { EmbedBuilder } from "discord.js";
 
