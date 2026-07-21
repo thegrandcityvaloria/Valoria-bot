@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import { connectDB } from "./database/database.js";
 
 import ping from "./commands/ping.js";
+import register from "./commands/register.js";
 
 dotenv.config();
 
