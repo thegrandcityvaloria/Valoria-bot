@@ -1,5 +1,5 @@
 
-โค้ด แต่อยากให้แก้เรียงแบบในรูป พวกชื่อสถสนะ
+console.log("ดึงข้อมูลผู้เล่น");
 
 import { EmbedBuilder } from "discord.js";
 
