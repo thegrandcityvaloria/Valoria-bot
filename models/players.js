@@ -58,9 +58,9 @@ const playerSchema = new mongoose.Schema({
     },
 
     maxHp: {
-        type: Number,
-        default: 100
-    },
+    type: Number,
+    default: 5000
+},
 
     mp: {
         type: Number,
@@ -68,9 +68,9 @@ const playerSchema = new mongoose.Schema({
     },
 
     maxMp: {
-        type: Number,
-        default: 100
-    },
+    type: Number,
+    default: 2000
+},
 
     // Stats
     str: {
