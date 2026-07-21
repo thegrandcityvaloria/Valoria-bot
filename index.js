@@ -1,16 +1,16 @@
 import { Client, GatewayIntentBits } from "discord.js";
 import dotenv from "dotenv";
+import db from "./database/database.js";
 
 dotenv.config();
-import db from "./database/database.js";
+
 const client = new Client({
-  intents: [
-    GatewayIntentBits.Guilds
-  ]
+    intents: [GatewayIntentBits.Guilds]
 });
 
-client.once("ready", () => {
-  console.log(`✅ ${client.user.tag} Online`);
+client.once("clientReady", () => {
+    console.log("📦 Database Loaded");
+    console.log(`✅ ${client.user.tag} Online`);
 });
 
 client.login(process.env.TOKEN);
