@@ -36,17 +36,14 @@ export default {
         });
 
         const createdDate = player.createdAt.toLocaleDateString("th-TH");
+const hpBar = "▰▰▰▱▱";
+const mpBar = "▰▰▰▰▱";
 
-        const embed = new EmbedBuilder()
-
-            const hpBar = "▰▰▰▱▱";
-            const mpBar = "▰▰▰▰▱";
-
-
-.setColor("#111111")
-.setTitle("🏛️ The Grand City of Valoria")
-.setThumbnail(avatar)
-.setDescription(`
+const embed = new EmbedBuilder()
+    .setColor("#111111")
+    .setTitle("🏛️ The Grand City of Valoria")
+    .setThumbnail(avatar)
+    .setDescription(`
 # ◈ STATE ◈
 
 **Name :** ${player.characterName}
@@ -56,10 +53,10 @@ export default {
 HP : ${player.hp} ${hpBar} ${player.maxHp}
 MP : ${player.mp} ${mpBar} ${player.maxMp}
 
-「 PK : ${player.pk} 」   「 DP : ${player.dp} 」
+「 PK : ${player.pk ?? 0} 」   「 DP : ${player.dp ?? 0} 」
 
 EXP  : ${player.exp}
-CEXP : ${player.cExp}
+CEXP : ${player.cExp ?? 0}
 
 ────────────────────
 
@@ -67,7 +64,7 @@ STR : ${player.str}     AGI : ${player.agi}
 INT : ${player.int}     VIT : ${player.vit}
 DEX : ${player.dex}     LUK : ${player.luck}
 
-Skill Point : ${player.skillPoint}
+Skill Point : ${player.skillPoint ?? 0}
 \`\`\`
 
 > 🧬 เผ่า : ${races[player.race]}
@@ -77,9 +74,10 @@ Skill Point : ${player.skillPoint}
 
 📅 วันที่เข้าร่วมเมือง : ${createdDate}
 `)
-.setFooter({
-    text: "The Grand City of Valoria"
-});
+    .setFooter({
+        text: "The Grand City of Valoria"
+    })
+    .setTimestamp();
             .setTimestamp();
 
         await interaction.reply({
