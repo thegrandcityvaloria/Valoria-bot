@@ -1,7 +1,9 @@
-console.log("ทดสอบใหม่");
+console.log("ดึงฐานข้อมูล");
 
 import { Client, GatewayIntentBits, REST, Routes } from "discord.js";
 import dotenv from "dotenv";
+
+import { connectDB } from "./Database/database.js";
 
 import ping from "./commands/ping.js";
 
@@ -30,6 +32,8 @@ client.once("clientReady", async () => {
 
   const rest = new REST({ version: "10" })
     .setToken(process.env.TOKEN);
+
+
   await rest.put(
     Routes.applicationCommands(client.user.id),
     {
@@ -42,9 +46,12 @@ client.once("clientReady", async () => {
     }
   );
 
+
   console.log("✅ Slash Command Registered");
 
 });
+
+
 // รับคำสั่ง Discord
 client.on("interactionCreate", async interaction => {
 
@@ -62,4 +69,9 @@ client.on("interactionCreate", async interaction => {
 });
 
 
+// เชื่อม MongoDB
+connectDB();
+
+
+// Login Bot
 client.login(process.env.TOKEN);
