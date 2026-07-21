@@ -45,8 +45,68 @@ client.once("clientReady", async () => {
           description: "ทดสอบบอท"
         },
         {
- name:"register",
- description:"สร้างตัวละครในเมืองวาโลเรีย"
+  name: "register",
+  description: "สร้างตัวละครในเมืองวาโลเรีย",
+  options: [
+    {
+      name: "name",
+      description: "ชื่อตัวละคร",
+      type: 3,
+      required: true
+    },
+    {
+      name: "race",
+      description: "เลือกเผ่าพันธุ์",
+      type: 3,
+      required: true,
+      choices: [
+        {
+          name: "มนุษย์",
+          value: "มนุษย์"
+        },
+        {
+          name: "เอลฟ์",
+          value: "เอลฟ์"
+        },
+        {
+          name: "สัตว์อสูร",
+          value: "สัตว์อสูร"
+        },
+        {
+          name: "ปีศาจ",
+          value: "ปีศาจ"
+        }
+      ]
+    },
+    {
+      name: "job",
+      description: "เลือกอาชีพ",
+      type: 3,
+      required: true,
+      choices: [
+        {
+          name: "อัศวิน",
+          value: "อัศวิน"
+        },
+        {
+          name: "นักเวท",
+          value: "นักเวท"
+        },
+        {
+          name: "พ่อค้า",
+          value: "พ่อค้า"
+        },
+        {
+          name: "เชฟ",
+          value: "เชฟ"
+        },
+        {
+          name: "บาร์เทนเดอร์",
+          value: "บาร์เทนเดอร์"
+        }
+      ]
+    }
+  ]
 }
       ]
     }
