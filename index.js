@@ -1,4 +1,4 @@
-console.log("ทดสอบ v2");
+console.log("ทดสอบใหม่");
 import { Client, GatewayIntentBits } from "discord.js";
 import dotenv from "dotenv";
 
