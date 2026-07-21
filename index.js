@@ -2,7 +2,7 @@ import { Client, GatewayIntentBits } from "discord.js";
 import dotenv from "dotenv";
 
 dotenv.config();
-
+import db from "./database/database.js";
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds
