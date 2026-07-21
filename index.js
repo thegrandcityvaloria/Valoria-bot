@@ -1,3 +1,4 @@
+console.log("VERSION 2");
 import { Client, GatewayIntentBits } from "discord.js";
 import dotenv from "dotenv";
 
