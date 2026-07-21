@@ -1,4 +1,4 @@
-import Player from "../Models/player.js";
+import Player from "../models/players.js";
 
 
 export default {
