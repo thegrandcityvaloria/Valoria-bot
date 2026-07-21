@@ -1,5 +1,5 @@
 
-console.log("🔥 PROFILE FILE LOADED");
+console.log("🔥 โปรถูกใช้งาน");
 
 import { EmbedBuilder } from "discord.js";
 
