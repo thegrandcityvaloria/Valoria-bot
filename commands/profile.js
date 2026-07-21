@@ -1,49 +1,43 @@
 import { EmbedBuilder } from "discord.js";
-
 import Player from "../models/players.js";
-
 import { races } from "../config/races.js";
 import { jobs } from "../config/jobs.js";
 
 export default {
-
     name: "profile",
 
     async execute(interaction) {
-
         const player = await Player.findOne({
-
             userDiscord: interaction.user.id
-
         });
 
         if (!player) {
-
             return interaction.reply({
-
                 content: "❌ คุณยังไม่ได้สร้างตัวละคร ใช้ /register ก่อน",
-
                 ephemeral: true
-
             });
-
         }
 
         const avatar = interaction.member.displayAvatarURL({
-
             size: 1024
-
         });
 
         const createdDate = player.createdAt.toLocaleDateString("th-TH");
-const hpBar = "▰▰▰▱▱";
-const mpBar = "▰▰▰▰▱";
 
-const embed = new EmbedBuilder()
-    .setColor("#111111")
-    .setTitle("🏛️ The Grand City of Valoria")
-    .setThumbnail(avatar)
-    .setDescription(`
+        // ===== HP / MP BAR =====
+        const makeBar = (current, max, size = 5) => {
+            const filled = Math.round((current / max) * size);
+            return "▰".repeat(filled) + "▱".repeat(size - filled);
+        };
+
+        const hpBar = makeBar(player.hp, player.maxHp);
+        const mpBar = makeBar(player.mp, player.maxMp);
+
+        const embed = new EmbedBuilder()
+            .setColor("#111111")
+            .setTitle("🏛️ The Grand City of Valoria")
+            .setThumbnail(avatar)
+            .setDescription(`
 # ◈ STATE ◈
 
 **Name :** ${player.characterName}
@@ -74,18 +68,13 @@ Skill Point : ${player.skillPoint ?? 0}
 
 📅 วันที่เข้าร่วมเมือง : ${createdDate}
 `)
-    .setFooter({
-        text: "The Grand City of Valoria"
-    })
-    .setTimestamp();
+            .setFooter({
+                text: "The Grand City of Valoria"
+            })
             .setTimestamp();
 
         await interaction.reply({
-
             embeds: [embed]
-
         });
-
     }
-
 };
