@@ -21,7 +21,7 @@ const client = new Client({
 const commands = {
     ping,
     register,
-    profile
+    profile,
 };
 
 // เมื่อบอทออนไลน์
