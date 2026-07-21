@@ -46,7 +46,7 @@ client.once("clientReady", async () => {
 {
     name: "profile",
     description: "แสดงข้อมูลตัวละคร"
-}'
+},
 
                     {
                         name: "register",
