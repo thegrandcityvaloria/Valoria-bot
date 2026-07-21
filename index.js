@@ -9,7 +9,7 @@ const client = new Client({
 });
 
 client.once("clientReady", () => {
-  console.log("🚀 โค้ดเวอร์ชันใหม่ทำงานแล้ว!");
+  console.log("🚀 New code!");
   console.log(`✅ ${client.user.tag} Online`);
 });
 
