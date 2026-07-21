@@ -3,7 +3,7 @@ console.log("ดึงฐานข้อมูล");
 import { Client, GatewayIntentBits, REST, Routes } from "discord.js";
 import dotenv from "dotenv";
 
-import { connectDB } from "./Database/database.js";
+import { connectDB } from "./batabase/database.js";
 
 import ping from "./commands/ping.js";
 
