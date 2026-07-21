@@ -44,6 +44,10 @@ client.once("clientReady", async () => {
           name: "ping",
           description: "ทดสอบบอท"
         }
+        {
+ name:"register",
+ description:"สร้างตัวละครในเมืองวาโลเรีย"
+}
       ]
     }
   );
