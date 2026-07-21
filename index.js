@@ -20,7 +20,8 @@ const client = new Client({
 // คำสั่งทั้งหมด
 const commands = {
     ping,
-    register
+    register,
+    profile
 };
 
 // เมื่อบอทออนไลน์
@@ -42,6 +43,10 @@ client.once("clientReady", async () => {
                         name: "ping",
                         description: "ทดสอบบอท"
                     },
+{
+    name: "profile",
+    description: "แสดงข้อมูลตัวละคร"
+}'
 
                     {
                         name: "register",
