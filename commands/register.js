@@ -34,6 +34,8 @@ export default {
         ephemeral: true
     });
 }
+const maxHp = raceData.maxHp + (jobData.maxHp ?? 0);
+const maxMp = raceData.maxMp + (jobData.maxMp ?? 0);
 
         // เช็กว่าลงทะเบียนหรือยัง
         const existingPlayer = await Player.findOne({
@@ -100,8 +102,6 @@ export default {
             exp: 0,
             ruby: 5000,
 
-const maxHp = raceData.maxHp + (jobData.maxHp ?? 0);
-const maxMp = raceData.maxMp + (jobData.maxMp ?? 0);
 
 hp: maxHp,
 maxHp: maxHp,
