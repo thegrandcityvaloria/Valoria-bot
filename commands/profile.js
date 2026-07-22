@@ -62,8 +62,8 @@ embed
 .setThumbnail(avatar)
 .setDescription(`
 
- **Player** : ${player.characterName}
 
+ **Player** : ${player.characterName}
 
 >  เผ่าพันธุ์ : ${races[player.race]}  | อาชีพ : ${jobs[player.job]} 
 >      Rank : ${player.rank}             Level : ${player.level}
