@@ -103,18 +103,18 @@ const maxMp = raceData.maxMp + (jobData.maxMp ?? 0);
             ruby: 5000,
 
 
-hp: maxHp,
-maxHp: maxHp,
+            hp: maxHp,
+            maxHp: maxHp,
 
-mp: maxMp,
-maxMp: maxMp,
+            mp: maxMp,
+            maxMp: maxMp,
 
-str: raceData.str + (jobData.str ?? 0),
-dex: raceData.dex + (jobData.dex ?? 0),
-agi: raceData.agi + (jobData.agi ?? 0),
-vit: raceData.vit + (jobData.vit ?? 0),
-int: raceData.int + (jobData.int ?? 0),
-luck: raceData.luck + (jobData.luck ?? 0),
+            str: raceData.str + (jobData.str ?? 0),
+            dex: raceData.dex + (jobData.dex ?? 0),
+            agi: raceData.agi + (jobData.agi ?? 0),
+            vit: raceData.vit + (jobData.vit ?? 0),
+            int: raceData.int + (jobData.int ?? 0),
+            luck: raceData.luck + (jobData.luck ?? 0),
 
         });
 
