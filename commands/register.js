@@ -2,8 +2,9 @@ import {
     EmbedBuilder
 } from "discord.js";
 
-import Player from "../models/players.js";
+import { raceStats, jobStats } from "../config/stats.js";
 
+import Player from "../models/players.js";
 import { raceRoles, jobRoles } from "../config/roles.js";
 import { races } from "../config/races.js";
 import { jobs } from "../config/jobs.js";
@@ -89,20 +90,18 @@ export default {
             exp: 0,
             ruby: 5000,
 
-            // HP / MP
-            hp: 100,
-            maxHp:5000,
+            hp: raceData.hp + (jobData.hp ?? 0),
+maxHp: raceData.maxHp + (jobData.hp ?? 0),
 
-            mp: 100,
-            maxMp:2000,
+mp: raceData.mp + (jobData.mp ?? 0),
+maxMp: raceData.maxMp + (jobData.mp ?? 0),
 
-            // Stats
-            str: 10,
-            dex: 10,
-            agi: 10,
-            vit: 10,
-            int: 10,
-            luck: 10
+str: raceData.str + (jobData.str ?? 0),
+dex: raceData.dex + (jobData.dex ?? 0),
+agi: raceData.agi + (jobData.agi ?? 0),
+vit: raceData.vit + (jobData.vit ?? 0),
+int: raceData.int + (jobData.int ?? 0),
+luck: raceData.luck + (jobData.luck ?? 0),
 
         });
 
