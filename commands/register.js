@@ -139,75 +139,52 @@ const maxMp = raceData.maxMp + (jobData.maxMp ?? 0);
             console.log("Role Error :", err);
 
         }
+        .setThumbnail(interaction.user.displayAvatarURL({ size: 512 }))
                 // ===== Embed =====
 
-        const embed = new EmbedBuilder()
+const embed = new EmbedBuilder()
+    .setColor("#111111")
+    .setTitle("SYSTEM")
+    .setDescription(
+`## ✨ Soul Registration Complete
 
-            .setColor("#111111")
+Welcome to **The Grand City of Valoria.**
 
-            .setTitle("🏛️ The Grand City Of Valoria")
+━━━━━━━━━━━━━━━━━━
 
-            .setDescription("✨ ลงทะเบียนตัวละครสำเร็จ")
+### 「 ${player.characterName} 」
 
-            .addFields(
+🧬 **Race** • ${races[player.race]}
+⚔️ **Class** • ${jobs[player.job]}
 
-                {
-                    name: "👤 ชื่อตัวละคร",
-                    value: player.characterName,
-                    inline: true
-                },
+━━━━━━━━━━━━━━━━━━
 
-                {
-                    name: "🧬 เผ่าพันธุ์",
-                    value: races[player.race],
-                    inline: true
-                },
+🏅 **Rank** • ${player.rank}
+⭐ **Level** • ${player.level}
+✨ **EXP** • ${player.exp}
 
-                {
-                    name: "⚔️ อาชีพ",
-                    value: jobs[player.job],
-                    inline: true
-                },
+━━━━━━━━━━━━━━━━━━
 
-                {
-                    name: "🏅 Rank",
-                    value: player.rank,
-                    inline: true
-                },
+❤️ **HP** • ${player.hp} / ${player.maxHp}
+🔷 **MP** • ${player.mp} / ${player.maxMp}
 
-                {
-                    name: "⭐ Level",
-                    value: player.level.toString(),
-                    inline: true
-                },
+💎 **Ruby** • ${player.ruby.toLocaleString()}
 
-                {
-                    name: "✨ EXP",
-                    value: player.exp.toString(),
-                    inline: true
-                },
+━━━━━━━━━━━━━━━━━━
 
-                {
-                    name: "💎 Ruby",
-                    value: player.ruby.toString(),
-                    inline: true
-                }
+> *The System recognizes your existence.*
+>
+> *May fate guide your path.*
+`
+    )
+    .setAuthor({
+    name: "VALORIA SYSTEM"
+})
+    .setFooter({
+        text: "The Grand City of Valoria"
+    })
+    .setTimestamp();
 
-            )
-
-            .setFooter({
-
-                text: "The Grand City Of Valoria"
-
-            })
-
-            .setTimestamp();
-                await interaction.reply({
-
-            embeds: [embed]
-
-        });
-
-    }
-
-};
+await interaction.reply({
+    embeds: [embed]
+});
