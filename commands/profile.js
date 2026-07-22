@@ -21,6 +21,11 @@ const targetMember =
 const player = await Player.findOne({
     userDiscord: targetUser.id
 });
+const profession = player.profession?.get(player.job);
+
+const professionLevel = profession?.level ?? 1;
+
+const professionExp = profession?.exp ?? 0;
 
         if (!player) {
 
@@ -88,7 +93,7 @@ MP : ${String(player.mp).padEnd(5)} ${mpBar} ${player.maxMp}
 \`\`\`
 ╭──────────────╮
 │ EXP  : ${String(player.exp).padEnd(6)}│
-│ CEXP : ${String(player.cExp ?? 86).padEnd(6)}│
+│ PEXP : ${String(professionExp).padEnd(6)}│
 ╰──────────────╯
 ──────────────────────────
 
@@ -96,7 +101,8 @@ STR : ${String(player.str).padEnd(5)} AGI : ${player.agi}
 INT : ${String(player.int).padEnd(5)} VIT : ${player.vit}
 DEX : ${String(player.dex).padEnd(5)} LUK : ${player.luck}
 
-skill points : ${player.skillPoint ?? 64}
+Stat Points : ${player.statPoint}
+Skill Points : ${player.skillPoint}
 \`\`\`
 -# Login :  ${createdDate} ${daysPlayed} Day
 `)
