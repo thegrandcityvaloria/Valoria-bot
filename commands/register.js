@@ -91,10 +91,10 @@ export default {
 
             // HP / MP
             hp: 100,
-            maxHp: 100,
+            maxHp:${player.maxHp},
 
             mp: 100,
-            maxMp: 100,
+            maxMp:${player.maxMp},
 
             // Stats
             str: 10,
