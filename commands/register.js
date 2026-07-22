@@ -45,7 +45,7 @@ const maxMp = raceData.maxMp + (jobData.maxMp ?? 0);
         if (existingPlayer) {
 
             return interaction.reply({
-                content: "❌ คุณมีตัวละครอยู่แล้ว",
+                content: "พบข้อมูลการลงทะเบียนแล้ว",
                 ephemeral: true
             });
 
@@ -60,7 +60,7 @@ const maxMp = raceData.maxMp + (jobData.maxMp ?? 0);
             return interaction.reply({
 
                 content:
-                    "❌ ชื่อตัวละครต้องมี 3-40 ตัวอักษร",
+                    "กรุณาระบุชื่อ ขนาด 3-40 ตัวอักษร",
 
                 ephemeral: true
 
