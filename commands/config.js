@@ -27,6 +27,20 @@ data: new SlashCommandBuilder()
 
 async execute(interaction){
 
+    if(
+        !interaction.member.permissions.has(
+            PermissionFlagsBits.Administrator
+        )
+    ){
+
+        return interaction.reply({
+            content:"❌ คุณไม่มีสิทธิ์ใช้คำสั่งนี้",
+            ephemeral:true
+        });
+
+    }
+
+
     const value =
         interaction.options.getBoolean("delete_leave");
 
@@ -66,7 +80,8 @@ ${value
 
 
 await interaction.reply({
-    embeds:[embed]
+    embeds:[embed],
+    ephemeral:true
 });
 
 
