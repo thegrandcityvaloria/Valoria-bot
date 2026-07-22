@@ -36,9 +36,9 @@ const commands = [
       .setDescription("ลบตัวละครเมื่อผู้เล่นออกจากเซิร์ฟหรือไม่")
       .setRequired(true)
   )
-  .setDefaultMemberPermissions(
-    PermissionFlagsBits.Administrator
-  )
+//  .setDefaultMemberPermissions(
+//    PermissionFlagsBits.Administrator
+//  )
 
 ].map(command => command.toJSON());
 
