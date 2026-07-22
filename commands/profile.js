@@ -1,5 +1,4 @@
-
-console.log("ดาวน์โหลดโปรไฟล์สำเร็จ ✅");
+console.log("PROFILE VERSION 2");
 
 import { EmbedBuilder } from "discord.js";
 
