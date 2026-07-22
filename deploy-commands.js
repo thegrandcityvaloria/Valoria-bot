@@ -4,9 +4,11 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const commands = [
+
   new SlashCommandBuilder()
     .setName("ping")
     .setDescription("ทดสอบบอท"),
+
 
   new SlashCommandBuilder()
     .setName("profile")
@@ -16,7 +18,19 @@ const commands = [
         .setName("user")
         .setDescription("ผู้เล่นที่ต้องการดู")
         .setRequired(false)
+    ),
+
+
+  new SlashCommandBuilder()
+    .setName("config")
+    .setDescription("ตั้งค่าระบบ Valoria")
+    .addBooleanOption(option =>
+      option
+        .setName("delete_leave")
+        .setDescription("ลบตัวละครเมื่อผู้เล่นออกจากเซิร์ฟหรือไม่")
+        .setRequired(true)
     )
+
 ].map(command => command.toJSON());
 
 
