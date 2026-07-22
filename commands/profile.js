@@ -34,7 +34,7 @@ export default {
 
         const avatar = interaction.member.displayAvatarURL({
 
-            size: 2048
+            size: 512
 
         });
 
