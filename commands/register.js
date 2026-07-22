@@ -148,14 +148,12 @@ const embed = new EmbedBuilder()
         name: "VALORIA SYSTEM"
     })
     .setThumbnail(interaction.user.displayAvatarURL({ size: 512 }))
-    .setTitle("SYSTEM")
+    .setTitle("Registration Complete")
     .setDescription(`
-## Soul Registration Complete
 
 Welcome to **The Grand City of Valoria.**
 
 ━━━━━━━━━━━━━━━━━━
-
 ### 「 ${player.characterName} 」
 
 **Race** • ${races[player.race]}
@@ -177,7 +175,6 @@ Welcome to **The Grand City of Valoria.**
 ━━━━━━━━━━━━━━━━━━
 
 > *The System recognizes your existence.*
->
 > *May fate guide your path.*
 `)
     .setFooter({
