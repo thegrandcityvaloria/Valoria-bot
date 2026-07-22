@@ -40,7 +40,7 @@ export default {
 
         const createdDate = player.createdAt.toLocaleDateString("en-GB", {
     day: "numeric",
-    month: "short",
+    month: "long",
     year: "numeric",
 });
     
