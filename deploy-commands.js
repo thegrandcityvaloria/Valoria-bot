@@ -6,9 +6,18 @@ dotenv.config();
 const commands = [
   new SlashCommandBuilder()
     .setName("ping")
-    .setDescription("ทดสอบบอท")
-    .toJSON()
-];
+    .setDescription("ทดสอบบอท"),
+
+  new SlashCommandBuilder()
+    .setName("profile")
+    .setDescription("ดูโปรไฟล์")
+    .addUserOption(option =>
+      option
+        .setName("user")
+        .setDescription("ผู้เล่นที่ต้องการดู")
+        .setRequired(false)
+    )
+].map(command => command.toJSON());
 
 
 const rest = new REST({ version: "10" })
