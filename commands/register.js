@@ -42,13 +42,13 @@ export default {
         // ตรวจสอบชื่อ
         if (
             characterName.length < 3 ||
-            characterName.length > 16
+            characterName.length > 40
         ) {
 
             return interaction.reply({
 
                 content:
-                    "❌ ชื่อตัวละครต้องมี 3-16 ตัวอักษร",
+                    "❌ ชื่อตัวละครต้องมี 3-40 ตัวอักษร",
 
                 ephemeral: true
 
