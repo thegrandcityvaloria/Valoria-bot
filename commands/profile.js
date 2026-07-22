@@ -88,7 +88,7 @@ DEX : ${String(player.dex).padEnd(5)} LUK : ${player.luck}
 Skill Point : ${player.skillPoint ?? 64}
 \`\`\`
 join ${createdDate}
-`
+`)
             .setFooter({
                 text: `The Grand City of Valoria • ${interaction.user.username}`
             })
