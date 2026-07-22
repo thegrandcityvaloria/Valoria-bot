@@ -87,14 +87,14 @@ export default {
             rank: "E",
             level: 1,
             exp: 0,
-            ruby: 1000,
+            ruby: 5000,
 
             // HP / MP
             hp: 100,
-            maxHp:${player.maxHp},
+            maxHp:5000,
 
             mp: 100,
-            maxMp:${player.maxMp},
+            maxMp:2000,
 
             // Stats
             str: 10,
