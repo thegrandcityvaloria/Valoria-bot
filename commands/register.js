@@ -115,7 +115,16 @@ const maxMp = raceData.maxMp + (jobData.maxMp ?? 0);
             vit: raceData.vit + (jobData.vit ?? 0),
             int: raceData.int + (jobData.int ?? 0),
             luck: raceData.luck + (jobData.luck ?? 0),
-
+            profession: {
+                [job]: {
+                    level: 1,
+                    exp: 0
+                }
+            },
+            statPoint: 0,
+            skillPoint: 0,
+            pk: 0,
+            dp: 0,
         });
 
         // ===== แจกยศ Discord =====
