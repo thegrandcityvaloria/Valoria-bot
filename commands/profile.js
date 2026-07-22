@@ -40,26 +40,24 @@ export default {
 
         const createdDate = player.createdAt.toLocaleDateString("th-TH");
 
-        const embed = new EmbedBuilder()
-
-            .setColor("#111111")
-
-            .setTitle("🏛️ The Grand City Of Valoria")
-
-            .setThumbnail(avatar)
-
-           const makeBar = (current, max, size = 6) => {
+const makeBar = (current, max, size = 6) => {
     const filled = Math.round((current / max) * size);
     return "▰".repeat(filled) + "▱".repeat(size - filled);
 };
 
+        const embed = new EmbedBuilder()
+
+            .setColor("#111111")
+
+            .setTitle("█▓▒­░⡷⠂**STATE**⠐⢾░▒▓█")
+
+            .setThumbnail(avatar)
+
+           
+
 const hpBar = makeBar(player.hp, player.maxHp);
 const mpBar = makeBar(player.mp, player.maxMp);
 
-embed
-.setColor("#111111")
-.setTitle("█▓▒­░⡷⠂**STATE**⠐⢾░▒▓█")
-.setThumbnail(avatar)
 .setDescription(`
 
 
