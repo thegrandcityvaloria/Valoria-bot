@@ -59,7 +59,7 @@ const mpBar = makeBar(player.mp, player.maxMp);
 
         const embed = new EmbedBuilder()
 
-            .setColor("##FFD700")
+            .setColor("#FFD700")
 
             .setTitle("█▓▒­░⡷⠂STATE⠐⢾░▒▓█")
 
