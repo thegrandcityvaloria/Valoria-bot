@@ -107,7 +107,46 @@ const playerSchema = new mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now
-    }
+    },
+    // Profession
+profession: {
+    type: Map,
+    of: new mongoose.Schema({
+        level: {
+            type: Number,
+            default: 1
+        },
+        exp: {
+            type: Number,
+            default: 0
+        }
+    }, {
+        _id: false
+    }),
+    default: {}
+},
+
+        // Points
+        statPoint: {
+            type: Number,
+            default: 0
+        },
+        
+        skillPoint: {
+            type: Number,
+            default: 0
+        },
+        
+        // PvP
+        pk: {
+            type: Number,
+            default: 0
+        },
+        
+        dp: {
+            type: Number,
+            default: 0
+}
 
 });
 
