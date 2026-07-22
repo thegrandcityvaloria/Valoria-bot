@@ -63,8 +63,8 @@ embed
 .setDescription(`
 
 
->  เผ่าพันธุ์ : ${races[player.race]}  | อาชีพ : ${jobs[player.job]} 
->      Rank : ${player.rank}             Level : ${player.level}
+>  เผ่าพันธุ์ : ${races[player.race]}  |  อาชีพ : ${jobs[player.job]} 
+>      Rank : ${player.rank}                Level : ${player.level}
 -# \`\`\`   Player : ${player.characterName}  \`\`\`
 **Ruby :** ${player.ruby} 💎
 
