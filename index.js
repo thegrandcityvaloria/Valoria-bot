@@ -45,9 +45,16 @@ client.once("clientReady", async () => {
                     },
 {
     name: "profile",
-    description: "แสดงข้อมูลตัวละคร"
+    description: "แสดงข้อมูลตัวละคร",
+    options: [
+        {
+            name: "user",
+            description: "ผู้เล่นที่ต้องการดู",
+            type: 6,
+            required: false
+        }
+    ]
 },
-
                     {
                         name: "register",
                         description: "สร้างตัวละครในเมืองวาโลเรีย",
