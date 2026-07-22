@@ -66,7 +66,7 @@ embed
 >  เผ่าพันธุ์ : ${races[player.race]}  |  อาชีพ : ${jobs[player.job]} 
 >      Rank : ${player.rank}                Level : ${player.level}
 -# \`\`\`   Player : ${player.characterName}  \`\`\`
-**Ruby :** ${player.ruby.toLocaleString()} 💎
+**รูบี้ :** ${player.ruby.toLocaleString()} 💎
 
 -# \`\`\`   system...   \`\`\`
 HP : ${String(player.hp).padEnd(5)} ${hpBar} ${player.maxHp}
