@@ -58,11 +58,9 @@ const mpBar = makeBar(player.mp, player.maxMp);
 
 embed
 .setColor("#111111")
-.setTitle("🏛️ The Grand City of Valoria")
+.setTitle("█▓▒­░⡷⠂**STATE**⠐⢾░▒▓█")
 .setThumbnail(avatar)
 .setDescription(`
-
-## █▓▒­░⡷⠂**STATE**⠐⢾░▒▓█
 
 **__Name__ :** ${player.characterName}
 **__Ruby__ :** ${player.ruby} 💎
