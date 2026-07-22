@@ -4,7 +4,7 @@ import {
   SlashCommandBuilder,
   PermissionFlagsBits
 } from "discord.js";
-console.log(commands.map(command => command.name));
+
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -48,7 +48,7 @@ const rest = new REST({ version: "10" })
 
 
 try {
-
+console.log(commands.map(command => command.name));
   console.log("กำลังลงทะเบียนคำสั่ง...");
 
   const data = await rest.put(
