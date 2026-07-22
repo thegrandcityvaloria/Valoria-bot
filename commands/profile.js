@@ -21,11 +21,6 @@ const targetMember =
 const player = await Player.findOne({
     userDiscord: targetUser.id
 });
-const profession = player.profession?.get(player.job);
-
-const professionLevel = profession?.level ?? 1;
-
-const professionExp = profession?.exp ?? 0;
 
         if (!player) {
 
@@ -41,6 +36,9 @@ targetUser.id === interaction.user.id
             });
 
         }
+      const profession = player.profession?.get(player.job);
+      const professionLevel = profession?.level ?? 1;
+      const professionExp = profession?.exp ?? 0;
 
        const avatar =
     targetMember?.displayAvatarURL({
@@ -92,8 +90,8 @@ MP : ${String(player.mp).padEnd(5)} ${mpBar} ${player.maxMp}
 「 PK : ${player.pk ?? 0} 」      「 DP : ${player.dp ?? 9} 」
 \`\`\`
 ╭──────────────╮
-│ EXP  : ${String(player.exp).padEnd(6)}│
-│ PEXP : ${String(professionExp).padEnd(6)}│
+│ Level : ${String(player.level).padEnd(4)} EXP : ${String(player.exp).padEnd(6)}│
+│ P.Lv : Lv.${professionLevel}  EXP : ${professionExp}│
 ╰──────────────╯
 ──────────────────────────
 
