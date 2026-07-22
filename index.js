@@ -93,7 +93,7 @@ process.on("unhandledRejection", error => {
 });
 
 console.log(
-    "TOKEN STATUS:",
-    process.env.TOKEN ? "มีค่า" : "ไม่มีค่า"
+    "TOKEN LENGTH:",
+    process.env.TOKEN?.length
 );
-client.login(process.env.TOKEN);
+client.login(process.env.TOKEN.trim());
