@@ -26,6 +26,14 @@ export default {
         const job = interaction.options.getString("job");
         const raceData = raceStats[race];
         const jobData = jobStats[job];
+        
+        //เพื่อป้องกันข้อมูลผิดพลาด (เช่น วันหลังเพิ่มเผ่าใหม่แต่ลืมใส่ใน stats.js)
+        if (!raceData || !jobData) {
+    return interaction.reply({
+        content: "❌ ไม่พบข้อมูลเผ่าหรืออาชีพ",
+        ephemeral: true
+    });
+}
 
         // เช็กว่าลงทะเบียนหรือยัง
         const existingPlayer = await Player.findOne({
@@ -92,11 +100,14 @@ export default {
             exp: 0,
             ruby: 5000,
 
-            hp: raceData.hp + (jobData.hp ?? 0),
-maxHp: raceData.maxHp + (jobData.hp ?? 0),
+const maxHp = raceData.maxHp + (jobData.maxHp ?? 0);
+const maxMp = raceData.maxMp + (jobData.maxMp ?? 0);
 
-mp: raceData.mp + (jobData.mp ?? 0),
-maxMp: raceData.maxMp + (jobData.mp ?? 0),
+hp: maxHp,
+maxHp: maxHp,
+
+mp: maxMp,
+maxMp: maxMp,
 
 str: raceData.str + (jobData.str ?? 0),
 dex: raceData.dex + (jobData.dex ?? 0),
