@@ -73,15 +73,12 @@ embed
 HP : ${String(player.hp).padEnd(5)} ${hpBar} ${player.maxHp}
 MP : ${String(player.mp).padEnd(5)} ${mpBar} ${player.maxMp}
 
-
 「 PK : ${player.pk ?? 0} 」      「 DP : ${player.dp ?? 9} 」
-
 \`\`\`
 ╭──────────────╮
 │ EXP  : ${String(player.exp).padEnd(6)}│
 │ CEXP : ${String(player.cExp ?? 86).padEnd(6)}│
 ╰──────────────╯
-
 ──────────────────────────
 
 STR : ${String(player.str).padEnd(5)} AGI : ${player.agi}
@@ -90,10 +87,8 @@ DEX : ${String(player.dex).padEnd(5)} LUK : ${player.luck}
 
 Skill Point : ${player.skillPoint ?? 64}
 \`\`\`
-
-
-📅 ${createdDate}
-`)
+join ${createdDate}
+`
             .setFooter({
                 text: `The Grand City of Valoria • ${interaction.user.username}`
             })
