@@ -54,8 +54,7 @@ async execute(interaction){
         
 **Server Configuration Updated**
 
-Player Leave Delete:
-${value ? "🗑️ Enabled" : "💾 Disabled"}
+Player Leave Delete:${value ? "🗑️ Enabled" : "💾 Disabled"}
 
 ━━━━━━━━━━━━━━━━
 
