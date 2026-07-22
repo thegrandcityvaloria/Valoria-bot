@@ -53,7 +53,7 @@ const mpBar = makeBar(player.mp, player.maxMp);
 
             .setColor("#111111")
 
-            .setTitle("█▓▒­░⡷⠂**STATE**⠐⢾░▒▓█")
+            .setTitle("█▓▒­░⡷⠂STATE⠐⢾░▒▓█")
 
             .setThumbnail(avatar)
 
