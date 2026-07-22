@@ -105,7 +105,7 @@ const commands = [
         {
     name:"config",
     description:"ตั้งค่าระบบ Valoria",
-    default_member_permissions: PermissionFlagsBits.Administrator,
+    default_member_permissions: "8",
     options:[
         {
             name:"delete_leave",
