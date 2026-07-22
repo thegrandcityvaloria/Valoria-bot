@@ -45,6 +45,10 @@ const makeBar = (current, max, size = 6) => {
     return "▰".repeat(filled) + "▱".repeat(size - filled);
 };
 
+const hpBar = makeBar(player.hp, player.maxHp);
+const mpBar = makeBar(player.mp, player.maxMp);
+
+
         const embed = new EmbedBuilder()
 
             .setColor("#111111")
@@ -53,10 +57,6 @@ const makeBar = (current, max, size = 6) => {
 
             .setThumbnail(avatar)
 
-           
-
-const hpBar = makeBar(player.hp, player.maxHp);
-const mpBar = makeBar(player.mp, player.maxMp);
 
 .setDescription(`
 
