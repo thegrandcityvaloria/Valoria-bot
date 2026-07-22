@@ -68,7 +68,7 @@ embed
 -# \`\`\`   Player : ${player.characterName}  \`\`\`
 **Ruby :** ${player.ruby} 💎
 
--# \`\`\`                          \`\`\`
+-# \`\`\`   system...   \`\`\`
 HP : ${String(player.hp).padEnd(5)} ${hpBar} ${player.maxHp}
 MP : ${String(player.mp).padEnd(5)} ${mpBar} ${player.maxMp}
 
