@@ -150,7 +150,7 @@ const embed = new EmbedBuilder()
     .setThumbnail(interaction.user.displayAvatarURL({ size: 512 }))
     .setTitle("SYSTEM")
     .setDescription(`
-## ✨ Soul Registration Complete
+## Soul Registration Complete
 
 Welcome to **The Grand City of Valoria.**
 
@@ -188,3 +188,7 @@ Welcome to **The Grand City of Valoria.**
 await interaction.reply({
     embeds: [embed]
 });
+
+    }
+
+};
