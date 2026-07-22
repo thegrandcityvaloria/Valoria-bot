@@ -62,7 +62,7 @@ embed
 .setThumbnail(avatar)
 .setDescription(`
 
-# █▓▒­░⡷⠂**STATE**⠐⢾░▒▓█
+## █▓▒­░⡷⠂**STATE**⠐⢾░▒▓█
 
 **__Name__ :** ${player.characterName}
 **__Ruby__ :** ${player.ruby} 💎
