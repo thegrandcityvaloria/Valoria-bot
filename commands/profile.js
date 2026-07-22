@@ -42,7 +42,7 @@ export default {
 
         const embed = new EmbedBuilder()
 
-            .setColor("#111111")
+            .setColor("#C9A227")
 
             .setTitle("🏛️ The Grand City Of Valoria")
 
