@@ -66,10 +66,10 @@ embed
 **Name :** ${player.characterName}
 **Ruby :** ${player.ruby} 💎
 
-> 🧬 **Race** : ${races[player.race]}
-> ⚔️ **Job** : ${jobs[player.job]}
-> 🏅 **Rank** : ${player.rank}
-> ⭐ **Level** : ${player.level}
+>  **เผ่าพันธุ์** : ${races[player.race]}
+>  **อาชีพ** : ${jobs[player.job]} 
+>  **Rank** : ${player.rank}
+>  **Level** : ${player.level}
 
 HP : ${String(player.hp).padEnd(5)} ${hpBar} ${player.maxHp}
 MP : ${String(player.mp).padEnd(5)} ${mpBar} ${player.maxMp}
