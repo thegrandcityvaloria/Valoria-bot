@@ -1,6 +1,7 @@
 import {
     REST,
-    Routes
+    Routes,
+    PermissionFlagsBits
 } from "discord.js";
 
 import dotenv from "dotenv";
@@ -101,16 +102,19 @@ const commands = [
 },
 
     {
-        name:"config",
-        description:"ตั้งค่าระบบ Valoria",
-        options:[
-            {
-                name:"delete_leave",
-                description:"ลบตัวละครเมื่อออกเซิร์ฟหรือไม่",
-                type:5,
-                required:true
-            }
-        ]
+        {
+    name:"config",
+    description:"ตั้งค่าระบบ Valoria",
+    default_member_permissions: PermissionFlagsBits.Administrator,
+    options:[
+        {
+            name:"delete_leave",
+            description:"ลบตัวละครเมื่อออกเซิร์ฟหรือไม่",
+            type:5,
+            required:true
+        }
+    ]
+}
     }
 
 ];
