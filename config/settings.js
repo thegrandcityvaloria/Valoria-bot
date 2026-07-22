@@ -1,4 +1,4 @@
-export const BOT_NAME = "Valoria";
+export const BOT_NAME = "Sync";
 
 export const DEFAULT_RANK = "E";
 
