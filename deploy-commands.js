@@ -101,7 +101,7 @@ const commands = [
     ]
 },
 
-    {
+
         {
     name:"config",
     description:"ตั้งค่าระบบ Valoria",
