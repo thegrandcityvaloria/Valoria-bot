@@ -140,14 +140,17 @@ const maxMp = raceData.maxMp + (jobData.maxMp ?? 0);
 
         }
        
-                // ===== Embed =====
+// ===== Embed =====
 
 const embed = new EmbedBuilder()
-    .setThumbnail(interaction.user.displayAvatarURL({ size: 512 })
     .setColor("#111111")
+    .setAuthor({
+        name: "VALORIA SYSTEM"
+    })
+    .setThumbnail(interaction.user.displayAvatarURL({ size: 512 }))
     .setTitle("SYSTEM")
-    .setDescription(
-`## ✨ Soul Registration Complete
+    .setDescription(`
+## ✨ Soul Registration Complete
 
 Welcome to **The Grand City of Valoria.**
 
@@ -169,18 +172,14 @@ Welcome to **The Grand City of Valoria.**
 **HP** • ${player.hp} / ${player.maxHp}
 **MP** • ${player.mp} / ${player.maxMp}
 
-**Ruby** • ${player.ruby.toLocaleString()}
+💎 **Ruby** • ${player.ruby.toLocaleString()}
 
 ━━━━━━━━━━━━━━━━━━
 
 > *The System recognizes your existence.*
 >
 > *May fate guide your path.*
-`
-    )
-    .setAuthor({
-    name: "VALORIA SYSTEM"
-})
+`)
     .setFooter({
         text: "The Grand City of Valoria"
     })
