@@ -102,7 +102,46 @@ const playerSchema = new mongoose.Schema({
         type: Number,
         default: 10
     },
+// Profession
+profession: {
+    type: Map,
+    of: new mongoose.Schema(
+        {
+            level: {
+                type: Number,
+                default: 1
+            },
+            exp: {
+                type: Number,
+                default: 0
+            }
+        },
+        { _id: false }
+    ),
+    default: {}
+},
 
+    // Points
+    statPoint: {
+        type: Number,
+        default: 0
+    },
+    
+    skillPoint: {
+        type: Number,
+        default: 0
+    },
+    
+    // PvP
+    pk: {
+        type: Number,
+        default: 0
+    },
+    
+    dp: {
+        type: Number,
+        default: 0
+    },
     // เวลาสมัคร
     createdAt: {
         type: Date,
