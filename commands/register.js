@@ -154,21 +154,21 @@ Welcome to **The Grand City of Valoria.**
 
 ### 「 ${player.characterName} 」
 
-🧬 **Race** • ${races[player.race]}
-⚔️ **Class** • ${jobs[player.job]}
+**Race** • ${races[player.race]}
+**Class** • ${jobs[player.job]}
 
 ━━━━━━━━━━━━━━━━━━
 
-🏅 **Rank** • ${player.rank}
-⭐ **Level** • ${player.level}
-✨ **EXP** • ${player.exp}
+**Rank** • ${player.rank}
+**Level** • ${player.level}
+**EXP** • ${player.exp}
 
 ━━━━━━━━━━━━━━━━━━
 
-❤️ **HP** • ${player.hp} / ${player.maxHp}
-🔷 **MP** • ${player.mp} / ${player.maxMp}
+**HP** • ${player.hp} / ${player.maxHp}
+**MP** • ${player.mp} / ${player.maxMp}
 
-💎 **Ruby** • ${player.ruby.toLocaleString()}
+**Ruby** • ${player.ruby.toLocaleString()}
 
 ━━━━━━━━━━━━━━━━━━
 
