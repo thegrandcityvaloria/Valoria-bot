@@ -37,10 +37,13 @@ targetUser.id === interaction.user.id
 
         }
 
-        const avatar = targetUser.displayAvatarURL({
-    size: 1024
-});
-
+       const avatar =
+    targetMember?.displayAvatarURL({
+        size: 1024
+    }) ??
+    targetUser.displayAvatarURL({
+        size: 1024
+    });
         const createdDate = player.createdAt.toLocaleDateString("en-GB", {
     day: "numeric",
     month: "long",
