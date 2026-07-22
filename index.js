@@ -92,5 +92,8 @@ process.on("unhandledRejection", error => {
     console.error("Unhandled Error:", error);
 });
 
-
+console.log(
+    "TOKEN STATUS:",
+    process.env.TOKEN ? "มีค่า" : "ไม่มีค่า"
+);
 client.login(process.env.TOKEN);
