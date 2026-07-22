@@ -7,6 +7,8 @@ import {
 } from "discord.js";
 
 import dotenv from "dotenv";
+dotenv.config();
+
 import { connectDB } from "./database/database.js";
 
 import ping from "./commands/ping.js";
@@ -15,7 +17,7 @@ import profile from "./commands/profile.js";
 import config from "./commands/config.js";
 
 
-dotenv.config();
+
 
 
 const client = new Client({
@@ -36,7 +38,7 @@ client.commands.set("config", config);
 
 
 
-client.once("ready", () => {
+client.once("clientReady", () => {
 
     console.log(`✅ ${client.user.tag} Online`);
 
@@ -74,5 +76,21 @@ async interaction => {
 
 
 connectDB();
+
+
+client.on("error", error => {
+    console.error("Discord Error:", error);
+});
+
+
+client.on("invalidated", () => {
+    console.log("❌ Session ถูกยกเลิก");
+});
+
+
+process.on("unhandledRejection", error => {
+    console.error("Unhandled Error:", error);
+});
+
 
 client.login(process.env.TOKEN);
