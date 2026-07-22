@@ -38,10 +38,18 @@ export default {
 
         });
 
-        const createdDate = player.createdAt.toLocaleDateString("th-TH");
+        const createdDate = player.createdAt.toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+});
+    
+        const daysPlayed = Math.floor(
+    (Date.now() - player.createdAt.getTime()) / (1000 * 60 * 60 * 24)
+);
 
-const makeBar = (current, max, size = 6) => {
-    const filled = Math.round((current / max) * size);
+        const makeBar = (current, max, size = 6) => {
+        const filled = Math.round((current / max) * size);
     return "▰".repeat(filled) + "▱".repeat(size - filled);
 };
 
@@ -84,7 +92,7 @@ DEX : ${String(player.dex).padEnd(5)} LUK : ${player.luck}
 
 skill points : ${player.skillPoint ?? 64}
 \`\`\`
--# Login :  ${createdDate}
+-# Login :  ${createdDate} ${daysPlayed} Day
 `)
             .setFooter({
                 text: `The Grand City of Valoria • ${interaction.user.username}`
@@ -94,6 +102,7 @@ skill points : ${player.skillPoint ?? 64}
         await interaction.reply({
             embeds: [embed]
         });
+        
     }
 };
 
