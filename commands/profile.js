@@ -66,7 +66,7 @@ embed
 **Name :** ${player.characterName}
 **Ruby :** ${player.ruby} 💎
 
-\`\`\`
+
 HP : ${String(player.hp).padEnd(5)} ${hpBar} ${player.maxHp}
 MP : ${String(player.mp).padEnd(5)} ${mpBar} ${player.maxMp}
 
@@ -81,6 +81,7 @@ MP : ${String(player.mp).padEnd(5)} ${mpBar} ${player.maxMp}
 
 ──────────────────────────
 
+\`\`\`
 STR : ${String(player.str).padEnd(5)} AGI : ${player.agi}
 INT : ${String(player.int).padEnd(5)} VIT : ${player.vit}
 DEX : ${String(player.dex).padEnd(5)} LUK : ${player.luck}
