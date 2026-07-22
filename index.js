@@ -92,8 +92,4 @@ process.on("unhandledRejection", error => {
     console.error("Unhandled Error:", error);
 });
 
-console.log(
-    "TOKEN LENGTH:",
-    process.env.TOKEN?.length
-);
 client.login(process.env.TOKEN.trim());
