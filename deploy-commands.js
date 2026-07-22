@@ -115,7 +115,7 @@ const commands = [
         }
     ]
 }
-    }
+    
 
 ];
 console.log(commands.map(c => c.name));
