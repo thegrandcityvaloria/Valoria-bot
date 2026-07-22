@@ -114,7 +114,7 @@ const commands = [
     }
 
 ];
-
+console.log(commands.map(c => c.name));
 
 const rest = new REST({version:"10"})
 .setToken(process.env.TOKEN);
