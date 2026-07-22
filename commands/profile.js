@@ -22,6 +22,8 @@ const player = await Player.findOne({
     userDiscord: targetUser.id
 });
 
+
+
         if (!player) {
 
             return interaction.reply({
@@ -36,6 +38,10 @@ targetUser.id === interaction.user.id
             });
 
         }
+      console.log(player);
+console.log(player.profession);
+console.log(player.profession?.get(player.job));
+      
       const profession = player.profession?.get(player.job);
       const professionLevel = profession?.level ?? 1;
       const professionExp = profession?.exp ?? 0;
