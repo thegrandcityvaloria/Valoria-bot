@@ -147,7 +147,12 @@ const embed = new EmbedBuilder()
     .setAuthor({
         name: "VALORIA SYSTEM"
     })
-    .setThumbnail(interaction.user.displayAvatarURL({ size: 512 }))
+    .setThumbnail(
+    interaction.member.displayAvatarURL({
+        size: 512,
+        dynamic: true
+    })
+)
     .setTitle("Registration Complete")
     .setDescription(`
 
