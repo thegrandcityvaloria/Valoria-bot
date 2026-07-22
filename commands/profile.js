@@ -26,7 +26,6 @@ const player = await Player.findOne({
 
             return interaction.reply({
 
-                content:
 content:
 targetUser.id === interaction.user.id
 ? "❌ คุณยังไม่ได้สร้างตัวละคร ใช้ /register ก่อน"
@@ -38,7 +37,7 @@ targetUser.id === interaction.user.id
 
         }
 
-        const avatar = targetMember.displayAvatarURL({
+        const avatar = targetUser.displayAvatarURL({
     size: 1024
 });
 
