@@ -139,7 +139,7 @@ const maxMp = raceData.maxMp + (jobData.maxMp ?? 0);
             console.log("Role Error :", err);
 
         }
-        .setThumbnail(interaction.user.displayAvatarURL({ size: 512 }))
+        .setThumbnail(interaction.user.displayAvatarURL({ size: 512 })
                 // ===== Embed =====
 
 const embed = new EmbedBuilder()
