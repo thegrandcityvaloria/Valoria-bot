@@ -66,14 +66,18 @@ embed
 **Name :** ${player.characterName}
 **Ruby :** ${player.ruby} 💎
 
+> 🧬 **Race** : ${races[player.race]}
+> ⚔️ **Job** : ${jobs[player.job]}
+> 🏅 **Rank** : ${player.rank}
+> ⭐ **Level** : ${player.level}
 
 HP : ${String(player.hp).padEnd(5)} ${hpBar} ${player.maxHp}
 MP : ${String(player.mp).padEnd(5)} ${mpBar} ${player.maxMp}
 
-คำเตือน : หากค่าสถานะเกินร่างกายจะระเบิด
 
 「 PK : ${player.pk ?? 0} 」      「 DP : ${player.dp ?? 9} 」
 
+\`\`\`
 ╭──────────────╮
 │ EXP  : ${String(player.exp).padEnd(6)}│
 │ CEXP : ${String(player.cExp ?? 86).padEnd(6)}│
@@ -88,11 +92,6 @@ DEX : ${String(player.dex).padEnd(5)} LUK : ${player.luck}
 Skill Point : ${player.skillPoint ?? 64}
 \`\`\`
 
-> 🧬 **Race** : ${races[player.race]}
-> ⚔️ **Job** : ${jobs[player.job]}
-> 🏅 **Rank** : ${player.rank}
-> ⭐ **Level** : ${player.level}
-\`\`\`
 
 📅 ${createdDate}
 `)
