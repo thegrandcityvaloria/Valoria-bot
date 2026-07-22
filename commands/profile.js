@@ -1,5 +1,5 @@
 
-console.log("🔥 โปรถูกใช้งาน");
+console.log("ดาวน์โหลดโปรไฟล์สำเร็จ ✅");
 
 import { EmbedBuilder } from "discord.js";
 
