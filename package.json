@@ -4,9 +4,9 @@
   "description": "Valoria Discord RPG Bot",
   "main": "index.js",
   "type": "module",
-  "scripts": {
-    "start": "node index.js"
-  },
+ "scripts": {
+  "start": "node deploy-commands.js && node index.js"
+}
   "dependencies": {
     "discord.js": "^14.21.0",
     "dotenv": "^17.2.1",
