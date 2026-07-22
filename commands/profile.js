@@ -11,11 +11,12 @@ import { jobs } from "../config/jobs.js";
 export default {
 
     name: "profile",
-
+const targetUser =
+    interaction.options.getUser("user") ?? targetUser.username;
     async execute(interaction) {
 
         const targetUser =
-    interaction.options.getUser("user") ?? interaction.user;
+    interaction.options.getUser("user") ?? targetUser.username;
 
 const targetMember =
     interaction.options.getMember("user") ?? interaction.member;
@@ -29,7 +30,7 @@ const player = await Player.findOne({
             return interaction.reply({
 
                 content:
-targetUser.id === interaction.user.id
+targetUser.id === targetUser.id
 ? "❌ คุณยังไม่ได้สร้างตัวละคร ใช้ /register ก่อน"
 : `❌ ${targetUser.username} ยังไม่ได้สร้างตัวละคร`,
 
