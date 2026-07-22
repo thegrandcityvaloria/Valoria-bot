@@ -42,7 +42,7 @@ export default {
 
         const embed = new EmbedBuilder()
 
-            .setColor("#C9A227")
+            .setColor("#111111")
 
             .setTitle("🏛️ The Grand City Of Valoria")
 
@@ -66,7 +66,7 @@ embed
 >  เผ่าพันธุ์ : ${races[player.race]}  |  อาชีพ : ${jobs[player.job]} 
 >      Rank : ${player.rank}                Level : ${player.level}
 -# \`\`\`   Player : ${player.characterName}  \`\`\`
-**Ruby :** ${player.ruby()} 💎
+**Ruby :** ${player.ruby.toLocaleString()} 💎
 
 -# \`\`\`   system...   \`\`\`
 HP : ${String(player.hp).padEnd(5)} ${hpBar} ${player.maxHp}
