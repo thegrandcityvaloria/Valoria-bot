@@ -61,10 +61,11 @@ embed
 .setTitle("🏛️ The Grand City of Valoria")
 .setThumbnail(avatar)
 .setDescription(`
-# ◈ STATE ◈
 
-**Name :** ${player.characterName}
-**Ruby :** ${player.ruby} 💎
+# █▓▒­░⡷⠂**STATE**⠐⢾░▒▓█
+
+**__Name__ :** ${player.characterName}
+**__Ruby__ :** ${player.ruby} 💎
 
 >  **เผ่าพันธุ์** : ${races[player.race]}
 >  **อาชีพ** : ${jobs[player.job]} 
