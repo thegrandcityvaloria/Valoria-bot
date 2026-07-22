@@ -7,7 +7,8 @@ import {
 
 import dotenv from "dotenv";
 
-dotenv.config();
+dotenv.config(); 
+console.log("กำลังรันไฟล์ deploy ตัวนี้");
 
 const commands = [
 
