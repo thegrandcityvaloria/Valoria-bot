@@ -1,4 +1,10 @@
-import { REST, Routes, SlashCommandBuilder } from "discord.js";
+import {
+  REST,
+  Routes,
+  SlashCommandBuilder,
+  PermissionFlagsBits
+} from "discord.js";
+
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -22,17 +28,17 @@ const commands = [
 
 
   new SlashCommandBuilder()
-    .setName("config")
-    .setDescription("ตั้งค่าระบบ Valoria")
-    .addBooleanOption(option =>
-      option
-        .setName("delete_leave")
-        .setDescription("ลบตัวละครเมื่อผู้เล่นออกจากเซิร์ฟหรือไม่")
-        .setRequired(true)
-    )
-    .setDefaultMemberPermissions(
-      PermissionFlagsBits.Administrator
-    )
+  .setName("config")
+  .setDescription("ตั้งค่าระบบ Valoria")
+  .addBooleanOption(option =>
+    option
+      .setName("delete_leave")
+      .setDescription("ลบตัวละครเมื่อผู้เล่นออกจากเซิร์ฟหรือไม่")
+      .setRequired(true)
+  )
+  .setDefaultMemberPermissions(
+    PermissionFlagsBits.Administrator
+  )
 
 ].map(command => command.toJSON());
 
