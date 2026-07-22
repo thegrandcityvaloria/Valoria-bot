@@ -85,9 +85,9 @@ STR : ${String(player.str).padEnd(5)} AGI : ${player.agi}
 INT : ${String(player.int).padEnd(5)} VIT : ${player.vit}
 DEX : ${String(player.dex).padEnd(5)} LUK : ${player.luck}
 
-Skill Point : ${player.skillPoint ?? 64}
+skill points : ${player.skillPoint ?? 64}
 \`\`\`
-join ${createdDate}
+-# Login :  ${createdDate}
 `)
             .setFooter({
                 text: `The Grand City of Valoria • ${interaction.user.username}`
