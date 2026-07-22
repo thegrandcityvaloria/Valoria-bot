@@ -14,11 +14,15 @@ export default {
 
     async execute(interaction) {
 
-        const player = await Player.findOne({
+        const targetUser =
+    interaction.options.getUser("user") ?? interaction.user;
 
-            userDiscord: interaction.user.id
+const targetMember =
+    interaction.options.getMember("user") ?? interaction.member;
 
-        });
+const player = await Player.findOne({
+    userDiscord: targetUser.id
+});
 
         if (!player) {
 
@@ -32,11 +36,9 @@ export default {
 
         }
 
-        const avatar = interaction.member.displayAvatarURL({
-
-            size: 1024
-
-        });
+        const avatar = targetMember.displayAvatarURL({
+    size: 1024
+});
 
         const createdDate = player.createdAt.toLocaleDateString("en-GB", {
     day: "numeric",
