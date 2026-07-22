@@ -9,6 +9,7 @@ import { raceRoles, jobRoles } from "../config/roles.js";
 import { races } from "../config/races.js";
 import { jobs } from "../config/jobs.js";
 
+
 export default {
 
     name: "register",
@@ -22,8 +23,9 @@ export default {
         const characterName = interaction.options.getString("name");
 
         const race = interaction.options.getString("race");
-
         const job = interaction.options.getString("job");
+        const raceData = raceStats[race];
+        const jobData = jobStats[job];
 
         // เช็กว่าลงทะเบียนหรือยัง
         const existingPlayer = await Player.findOne({
