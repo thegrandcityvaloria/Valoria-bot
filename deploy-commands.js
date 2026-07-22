@@ -1,3 +1,4 @@
+console.log("TEST DEPLOY FILE");
 import {
   REST,
   Routes,
