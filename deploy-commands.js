@@ -52,12 +52,15 @@ try {
 
   console.log("กำลังลงทะเบียนคำสั่ง...");
 
-  const data = await rest.put(
-    Routes.applicationCommands(process.env.CLIENT_ID),
-    {
-      body: commands
-    }
-  );
+const data = await rest.put(
+  Routes.applicationGuildCommands(
+    process.env.CLIENT_ID,
+    process.env.GUILD_ID
+  ),
+  {
+    body: commands
+  }
+);
 
   console.log("✅ ลงทะเบียน Slash Command สำเร็จ");
   console.log(data);
