@@ -28,7 +28,10 @@ const player = await Player.findOne({
 
             return interaction.reply({
 
-                content: "❌ คุณยังไม่ได้สร้างตัวละคร ใช้ /register ก่อน",
+                content:
+targetUser.id === interaction.user.id
+? "❌ คุณยังไม่ได้สร้างตัวละคร ใช้ /register ก่อน"
+: `❌ ${targetUser.username} ยังไม่ได้สร้างตัวละคร`,
 
                 ephemeral: true
 
@@ -97,8 +100,8 @@ skill points : ${player.skillPoint ?? 64}
 -# Login :  ${createdDate} ${daysPlayed} Day
 `)
             .setFooter({
-                text: `The Grand City of Valoria • ${interaction.user.username}`
-            })
+    text: `The Grand City of Valoria • ${targetUser.username}`
+})
             .setTimestamp();
 
         await interaction.reply({
