@@ -137,7 +137,7 @@ try{
         ),
 
         {
-            body: commands
+            body: []
         }
 
     );
