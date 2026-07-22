@@ -6,7 +6,9 @@ import {
 import dotenv from "dotenv";
 
 dotenv.config();
-
+console.log("TOKEN:", process.env.TOKEN ? "เจอแล้ว" : "ไม่เจอ");
+console.log("CLIENT_ID:", process.env.CLIENT_ID);
+console.log("GUILD_ID:", process.env.GUILD_ID);
 
 const commands = [
 
