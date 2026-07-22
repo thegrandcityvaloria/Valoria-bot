@@ -46,9 +46,10 @@ const commands = [
 const rest = new REST({ version: "10" })
 .setToken(process.env.TOKEN);
 
+console.log(commands.map(command => command.name));
 
 try {
-console.log(commands.map(command => command.name));
+
   console.log("กำลังลงทะเบียนคำสั่ง...");
 
   const data = await rest.put(
