@@ -85,7 +85,7 @@ STR : ${String(player.str).padEnd(5)} AGI : ${player.agi}
 INT : ${String(player.int).padEnd(5)} VIT : ${player.vit}
 DEX : ${String(player.dex).padEnd(5)} LUK : ${player.luck}
 
-**Skill Point :** ${player.skillPoint ?? 64}
+Skill Point : ${player.skillPoint ?? 64}
 \`\`\`
 join ${createdDate}
 `)
