@@ -4,7 +4,7 @@ import {
   SlashCommandBuilder,
   PermissionFlagsBits
 } from "discord.js";
-
+console.log(commands.map(command => command.name));
 import dotenv from "dotenv";
 
 dotenv.config();
