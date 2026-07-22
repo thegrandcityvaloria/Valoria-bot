@@ -48,83 +48,62 @@ export default {
 
             .setThumbnail(avatar)
 
-           const makeBar = (current, max, length = 10) => {
-    const percent = Math.max(0, Math.min(current / max, 1));
-    const filled = Math.round(percent * length);
-    return "█".repeat(filled) + "░".repeat(length - filled);
+           const makeBar = (current, max, size = 6) => {
+    const filled = Math.round((current / max) * size);
+    return "▰".repeat(filled) + "▱".repeat(size - filled);
 };
 
 const hpBar = makeBar(player.hp, player.maxHp);
 const mpBar = makeBar(player.mp, player.maxMp);
 
 embed
+.setColor("#111111")
+.setTitle("🏛️ The Grand City of Valoria")
+.setThumbnail(avatar)
 .setDescription(`
+# ◈ STATE ◈
+
+**Name :** ${player.characterName}
+**Ruby :** ${player.ruby} 💎
+
 \`\`\`
-╔═══════════════『 STATUS 』═══════════════╗
+HP : ${String(player.hp).padEnd(5)} ${hpBar} ${player.maxHp}
+MP : ${String(player.mp).padEnd(5)} ${mpBar} ${player.maxMp}
 
-   👤 Name : ${player.characterName}
-   💎 Ruby : ${player.ruby.toLocaleString()}
+คำเตือน : หากค่าสถานะเกินร่างกายจะระเบิด
 
-══════════════════════════════════════════
+「 PK : ${player.pk ?? 0} 」      「 DP : ${player.dp ?? 9} 」
 
- ❤️ HP  ${String(player.hp).padStart(4)}/${player.maxHp}
-      ${hpBar}
+╭──────────────╮
+│ EXP  : ${String(player.exp).padEnd(6)}│
+│ CEXP : ${String(player.cExp ?? 86).padEnd(6)}│
+╰──────────────╯
 
- 💙 MP  ${String(player.mp).padStart(4)}/${player.maxMp}
-      ${mpBar}
+──────────────────────────
 
-══════════════════════════════════════════
+STR : ${String(player.str).padEnd(5)} AGI : ${player.agi}
+INT : ${String(player.int).padEnd(5)} VIT : ${player.vit}
+DEX : ${String(player.dex).padEnd(5)} LUK : ${player.luck}
 
- ⚔ PK        : ${player.pk ?? 0}
- 🛡 DP        : ${player.dp ?? 9}
-
- ✦ EXP       : ${player.exp.toLocaleString()}
- ✦ Class EXP : ${player.cExp ?? 86}
-
-══════════════════════════════════════════
-
- ⚔ STR : ${String(player.str).padEnd(6)}
- 💨 AGI : ${String(player.agi).padEnd(6)}
-
- 🧠 INT : ${String(player.int).padEnd(6)}
- 🛡 VIT : ${String(player.vit).padEnd(6)}
-
- 🏹 DEX : ${String(player.dex).padEnd(6)}
- 🍀 LUK : ${String(player.luck).padEnd(6)}
-
-══════════════════════════════════════════
-
- 🎯 Skill Point : ${player.skillPoint ?? 64}
-
- 🌿 Race  : ${races[player.race]}
- ⚒ Job   : ${jobs[player.job]}
- 👑 Rank  : ${player.rank}
- ⭐ Level : ${player.level}
-
-══════════════════════════════════════════
-
- 📅 Joined : ${createdDate}
-
-╚════════════════════════════════════════╝
+Skill Point : ${player.skillPoint ?? 64}
 \`\`\`
-)
 
-            )
+> 🧬 **Race** : ${races[player.race]}
+> ⚔️ **Job** : ${jobs[player.job]}
+> 🏅 **Rank** : ${player.rank}
+> ⭐ **Level** : ${player.level}
 
+📅 ${createdDate}
+`)
             .setFooter({
-
-                text: "The Grand City Of Valoria"
-
+                text: `The Grand City of Valoria • ${interaction.user.username}`
             })
-
             .setTimestamp();
 
         await interaction.reply({
-
             embeds: [embed]
-
         });
-
     }
-
 };
+
+    
