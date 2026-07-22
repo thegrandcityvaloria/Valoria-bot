@@ -4,7 +4,7 @@ export function createEmbed(title) {
 
     return new EmbedBuilder()
 
-        .setColor("#111111")
+        .setColor("#FFD700")
 
         .setTitle(title)
 
