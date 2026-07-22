@@ -66,12 +66,12 @@ embed
 
 
 >  เผ่าพันธุ์ : ${races[player.race]}  | อาชีพ : ${jobs[player.job]} 
->  Rank : ${player.rank}              Level : ${player.level}
+>      Rank : ${player.rank}            Level : ${player.level}
 -# \`\`\`                          \`\`\`
 
 **Ruby :** ${player.ruby} 💎
 
--# \`\`\`──────────────────────────\`\`\`
+-# \`\`\`                          \`\`\`
 HP : ${String(player.hp).padEnd(5)} ${hpBar} ${player.maxHp}
 MP : ${String(player.mp).padEnd(5)} ${mpBar} ${player.maxMp}
 
