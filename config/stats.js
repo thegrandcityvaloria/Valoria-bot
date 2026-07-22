@@ -46,7 +46,7 @@ export const raceStats = {
         dex: 15,
         agi: 15,
         vit: 22,
-        int: 0,
+        int: 10,
         luck: 5
 
     },
