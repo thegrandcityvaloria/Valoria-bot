@@ -48,105 +48,66 @@ export default {
 
             .setThumbnail(avatar)
 
-            .setDescription(`Player  ${interaction.user}`)
+           const makeBar = (current, max, length = 10) => {
+    const percent = Math.max(0, Math.min(current / max, 1));
+    const filled = Math.round(percent * length);
+    return "█".repeat(filled) + "░".repeat(length - filled);
+};
 
-            .addFields(
+const hpBar = makeBar(player.hp, player.maxHp);
+const mpBar = makeBar(player.mp, player.maxMp);
 
-                {
-                    name: "👤 Playr",
-                    value: player.characterName,
-                    inline: true
-                },
+embed
+.setDescription(`
+\`\`\`
+╔═══════════════『 STATUS 』═══════════════╗
 
-                {
-                    name: "🧬 race",
-                    value: races[player.race],
-                    inline: true
-                },
+   👤 Name : ${player.characterName}
+   💎 Ruby : ${player.ruby.toLocaleString()}
 
-                {
-                    name: "⚔️ อาชีพ",
-                    value: jobs[player.job],
-                    inline: true
-                },
+══════════════════════════════════════════
 
-                {
-                    name: "🏅 Rank",
-                    value: player.rank,
-                    inline: true
-                },
+ ❤️ HP  ${String(player.hp).padStart(4)}/${player.maxHp}
+      ${hpBar}
 
-                {
-                    name: "⭐ Level",
-                    value: player.level.toString(),
-                    inline: true
-                },
+ 💙 MP  ${String(player.mp).padStart(4)}/${player.maxMp}
+      ${mpBar}
 
-                {
-                    name: "✨ EXP",
-                    value: player.exp.toString(),
-                    inline: true
-                },
+══════════════════════════════════════════
 
-                {
-                    name: "💎 Ruby",
-                    value: player.ruby.toString(),
-                    inline: true
-                },
+ ⚔ PK        : ${player.pk ?? 0}
+ 🛡 DP        : ${player.dp ?? 9}
 
-                {
-                    name: "❤️ HP",
-                    value: `${player.hp} / ${player.maxHp}`,
-                    inline: true
-                },
+ ✦ EXP       : ${player.exp.toLocaleString()}
+ ✦ Class EXP : ${player.cExp ?? 86}
 
-                {
-                    name: "🔷 MP",
-                    value: `${player.mp} / ${player.maxMp}`,
-                    inline: true
-                },
+══════════════════════════════════════════
 
-                {
-                    name: "⚔️ STR",
-                    value: player.str.toString(),
-                    inline: true
-                },
+ ⚔ STR : ${String(player.str).padEnd(6)}
+ 💨 AGI : ${String(player.agi).padEnd(6)}
 
-                {
-                    name: "🏹 DEX",
-                    value: player.dex.toString(),
-                    inline: true
-                },
+ 🧠 INT : ${String(player.int).padEnd(6)}
+ 🛡 VIT : ${String(player.vit).padEnd(6)}
 
-                {
-                    name: "💨 AGI",
-                    value: player.agi.toString(),
-                    inline: true
-                },
+ 🏹 DEX : ${String(player.dex).padEnd(6)}
+ 🍀 LUK : ${String(player.luck).padEnd(6)}
 
-                {
-                    name: "🛡️ VIT",
-                    value: player.vit.toString(),
-                    inline: true
-                },
+══════════════════════════════════════════
 
-                {
-                    name: "🧠 INT",
-                    value: player.int.toString(),
-                    inline: true
-                },
+ 🎯 Skill Point : ${player.skillPoint ?? 64}
 
-                {
-                    name: "🍀 LUCK",
-                    value: player.luck.toString(),
-                    inline: true
-                },
+ 🌿 Race  : ${races[player.race]}
+ ⚒ Job   : ${jobs[player.job]}
+ 👑 Rank  : ${player.rank}
+ ⭐ Level : ${player.level}
 
-                {
-                    name: "📅 วันที่เข้าร่วมเมือง",
-                    value: createdDate,
-                    inline: false
-                }
+══════════════════════════════════════════
+
+ 📅 Joined : ${createdDate}
+
+╚════════════════════════════════════════╝
+\`\`\`
+)
 
             )
 
