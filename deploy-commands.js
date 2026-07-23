@@ -129,18 +129,15 @@ try{
     console.log("กำลังลงทะเบียน...");
 
 
-    await rest.put(
+await rest.put(
+    Routes.applicationGuildCommands(
+        process.env.CLIENT_ID,
+        process.env.GUILD_ID
+    ),
+    { body: [] }
+);
 
-        Routes.applicationGuildCommands(
-            process.env.CLIENT_ID,
-            process.env.GUILD_ID
-        ),
-
-        {
-            body: commands
-        }
-
-    );
+console.log("ลบ Commands ทั้งหมดแล้ว");
 
 
     console.log("✅ Commands Registered");
