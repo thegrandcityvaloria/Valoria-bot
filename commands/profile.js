@@ -94,13 +94,9 @@ MP : ${String(player.mp).padEnd(5)} ${mpBar} ${player.maxMp}
 
 「 PK : ${player.pk ?? 0} 」      「 DP : ${player.dp ?? 9} 」
 \`\`\`
--# ╭──── Character ────╮
--# │ Level : ${player.level}
--# │ EXP   : ${player.exp}
--# ╰───────────────────╯
-
--# ╭──── Profession ──╮
--# │ อาชีพ : ${jobs[player.job]}
+-# ╭──── Porgess ────╮
+-# │ Character EXP   : ${player.exp}
+-# │ ${jobs[player.job]}
 -# │ Lv   : ${professionLevel}
 -# │ EXP : ${professionExp}
 -# ╰───────────────────╯
