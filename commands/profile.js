@@ -1,4 +1,4 @@
-console.log("PROFILE VERSION 2");
+console.log("PROFILE Data");
 
 import { EmbedBuilder } from "discord.js";
 
