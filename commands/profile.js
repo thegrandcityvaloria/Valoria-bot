@@ -1,6 +1,11 @@
 console.log("PROFILE Data");
 
-import { EmbedBuilder } from "discord.js";
+import {
+    EmbedBuilder,
+    ActionRowBuilder,
+    ButtonBuilder,
+    ButtonStyle
+} from "discord.js";
 
 import Player from "../models/players.js";
 
@@ -107,6 +112,14 @@ DEX : ${String(player.dex).padEnd(5)} LUK : ${player.luck}
     text: `The Grand City of Valoria • ${targetUser.username}`
 })
             .setTimestamp();
+            
+            const row = new ActionRowBuilder()
+    .addComponents(
+        new ButtonBuilder()
+            .setCustomId("profile_profession")
+            .setLabel("อาชีพ")
+            .setStyle(ButtonStyle.Primary)
+    );
 
         await interaction.reply({
             embeds: [embed]
