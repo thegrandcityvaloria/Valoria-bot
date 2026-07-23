@@ -94,20 +94,12 @@ MP : ${String(player.mp).padEnd(5)} ${mpBar} ${player.maxMp}
 
 「 PK : ${player.pk ?? 0} 」      「 DP : ${player.dp ?? 9} 」
 \`\`\`
-╭──── Porgess ────╮
-│  ${jobs[player.job]}
-│ Lv  : ${professionLevel}
-│ EXP : ${professionExp}
-╰───────────────────╯
-
-──────────────────────────
 
 STR : ${String(player.str).padEnd(5)} AGI : ${player.agi}
 INT : ${String(player.int).padEnd(5)} VIT : ${player.vit}
 DEX : ${String(player.dex).padEnd(5)} LUK : ${player.luck}
 
-Stat Points : ${player.statPoint}
-Skill Points : ${player.skillPoint}
+
 \`\`\`
 -# Login :  ${createdDate} ${daysPlayed} Day
 `)
