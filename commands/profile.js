@@ -123,6 +123,7 @@ DEX : ${String(player.dex).padEnd(5)} LUK : ${player.luck}
 
         await interaction.reply({
             embeds: [embed]
+            components: [row]
         });
         
     }
