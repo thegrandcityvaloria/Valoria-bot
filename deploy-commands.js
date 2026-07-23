@@ -134,14 +134,10 @@ await rest.put(
         process.env.CLIENT_ID,
         process.env.GUILD_ID
     ),
-    { body: [] }
+    { body: commands }
 );
 
-console.log("ลบ Commands ทั้งหมดแล้ว");
-
-
-    console.log("✅ Commands Registered");
-
+console.log("Commands Registered");
 
 }catch(error){
 
