@@ -94,10 +94,17 @@ MP : ${String(player.mp).padEnd(5)} ${mpBar} ${player.maxMp}
 
 「 PK : ${player.pk ?? 0} 」      「 DP : ${player.dp ?? 9} 」
 \`\`\`
-╭──────────────╮
-│ Level : ${String(player.level).padEnd(4)} EXP : ${String(player.exp).padEnd(6)}│
-│ P.Lv : Lv.${professionLevel}  EXP : ${professionExp}│
-╰──────────────╯
+╭──── Character ────╮
+│ Level : ${player.level}
+│ EXP   : ${player.exp}
+╰───────────────────╯
+
+╭──── Profession ──╮
+│ ${jobs[player.job]}
+│ Lv   : ${professionLevel}
+│ PEXP : ${professionExp}
+╰───────────────────╯
+
 ──────────────────────────
 
 STR : ${String(player.str).padEnd(5)} AGI : ${player.agi}
