@@ -88,18 +88,17 @@ const mpBar = makeBar(player.mp, player.maxMp);
 -# \`\`\`   Player : ${player.characterName}  \`\`\`
 **Ruby :** ${player.ruby.toLocaleString()} 💎
 
--# \`\`\`   system...   \`\`\`
+-# \`\`\`   Character EXP   : ${player.exp}   \`\`\`
 HP : ${String(player.hp).padEnd(5)} ${hpBar} ${player.maxHp}
 MP : ${String(player.mp).padEnd(5)} ${mpBar} ${player.maxMp}
 
 「 PK : ${player.pk ?? 0} 」      「 DP : ${player.dp ?? 9} 」
 \`\`\`
--# ╭──── Porgess ────╮
--# │ Character EXP   : ${player.exp}
--# │ ${jobs[player.job]}
--# │ Lv   : ${professionLevel}
--# │ EXP : ${professionExp}
--# ╰───────────────────╯
+╭──── Porgess ────╮
+│  ${jobs[player.job]}
+│ Lv  : ${professionLevel}
+│ EXP : ${professionExp}
+╰───────────────────╯
 
 ──────────────────────────
 
